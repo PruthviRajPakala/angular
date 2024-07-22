@@ -1,0 +1,160 @@
+
+<div class="container">
+    <h2>User Information Form</h2>
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="user.name"
+          required
+          (input)="onInputChange($event)"
+          (focus)="onFocus($event)"
+          (blur)="onBlur($event)"
+          class="form-control"
+        />
+      </div>
+  
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="user.email"
+          required
+          (input)="onInputChange($event)"
+          (focus)="onFocus($event)"
+          (blur)="onBlur($event)"
+          class="form-control"
+        />
+      </div>
+  
+      <!-- Age -->
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          [(ngModel)]="user.age"
+          required
+          min="0"
+          (input)="onInputChange($event)"
+          (focus)="onFocus($event)"
+          (blur)="onBlur($event)"
+          class="form-control"
+        />
+      </div>
+  
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="user.password"
+          required
+          minlength="6"
+          (input)="onInputChange($event)"
+          (focus)="onFocus($event)"
+          (blur)="onBlur($event)"
+          class="form-control"
+        />
+      </div>
+  
+      <!-- Birthdate -->
+      <div class="form-group">
+        <label for="birthdate">Birthdate:</label>
+        <input
+          type="date"
+          id="birthdate"
+          name="birthdate"
+          [(ngModel)]="user.birthdate"
+          required
+          (input)="onInputChange($event)"
+          (focus)="onFocus($event)"
+          (blur)="onBlur($event)"
+          class="form-control"
+        />
+      </div>
+  
+      <!-- Profile Image -->
+      <div class="form-group">
+        <label for="profileImage">Profile Image:</label>
+        <input
+          type="file"
+          id="profileImage"
+          name="profileImage"
+          (change)="onFileChange($event)"
+          class="form-control"
+        />
+      </div>
+  
+      <!-- Terms and Conditions -->
+      <div class="form-group form-check">
+        <input
+          type="checkbox"
+          id="termsAccepted"
+          name="termsAccepted"
+          [(ngModel)]="user.termsAccepted"
+          required
+          class="form-check-input"
+        />
+        <label for="termsAccepted" class="form-check-label">Accept Terms and Conditions</label>
+      </div>
+  
+      <!-- Gender -->
+      <div class="form-group">
+        <label>Gender:</label><br/>
+        <div class="form-check form-check-inline">
+          <input
+            type="radio"
+            id="genderMale"
+            name="gender"
+            [(ngModel)]="user.gender"
+            value="male"
+            required
+            class="form-check-input"
+          />
+          <label for="genderMale" class="form-check-label">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            type="radio"
+            id="genderFemale"
+            name="gender"
+            [(ngModel)]="user.gender"
+            value="female"
+            required
+            class="form-check-input"
+          />
+          <label for="genderFemale" class="form-check-label">Female</label>
+        </div>
+      </div>
+  
+      <!-- Country -->
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <select
+          id="country"
+          name="country"
+          [(ngModel)]="user.country"
+          required
+          class="form-control"
+        >
+          <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+        </select>
+      </div>
+  
+      <!-- Submit and Reset Buttons -->
+      <button type="submit" class="btn btn-primary" [disabled]="!userForm.form.valid">Submit</button> &nbsp;
+      <button type="button" class="btn btn-secondary" (click)="onReset()">Reset</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,61 @@
+<div class="container">
+    <h2>Operations in Angular</h2>
+    <div>
+      <label for="num1">Number 1:</label>
+      <input id="num1" [(ngModel)]="num1" type="number">
+    </div>
+    <div>
+      <label for="num2">Number 2:</label>
+      <input id="num2" [(ngModel)]="num2" type="number">
+    </div>
+  
+    <h3>Arithmetic Operations</h3>
+    <button (click)="arithmetic('add')">Add</button>
+    <button (click)="arithmetic('subtract')">Subtract</button>
+    <button (click)="arithmetic('multiply')">Multiply</button>
+    <button (click)="arithmetic('divide')">Divide</button>
+    <button (click)="arithmetic('modulus')">Modulus</button>
+  
+    <h3>Comparison Operations</h3>
+    <button (click)="comparison('equal')">Equal (==)</button>
+    <button (click)="comparison('strictEqual')">Strict Equal (===)</button>
+    <button (click)="comparison('notEqual')">Not Equal (!=)</button>
+    <button (click)="comparison('strictNotEqual')">Strict Not Equal (!==)</button>
+    <button (click)="comparison('greaterThan')">Greater Than (>)</button>
+    <button (click)="comparison('lessThan')">Less Than (<)</button>
+    <button (click)="comparison('greaterThanOrEqual')">Greater Than or Equal (>=)</button>
+    <button (click)="comparison('lessThanOrEqual')">Less Than or Equal (<=)</button>
+  
+    <h3>Logical Operations</h3>
+    <button (click)="logical('and')">AND (&&)</button>
+    <button (click)="logical('or')">OR (||)</button>
+    <button (click)="logical('not')">NOT (!)</button>
+  
+    <h3>Assignment Operations</h3>
+    <button (click)="assignment('assign')">Assign (=)</button>
+    <button (click)="assignment('addAssign')">Add Assign (+=)</button>
+    <button (click)="assignment('subtractAssign')">Subtract Assign (-=)</button>
+    <button (click)="assignment('multiplyAssign')">Multiply Assign (*=)</button>
+    <button (click)="assignment('divideAssign')">Divide Assign (/=)</button>
+  
+    <h3>Type Operations</h3>
+    <button (click)="typeOperation('typeOf')">Type Of</button>
+    <button (click)="typeOperation('instanceOf')">Instance Of</button>
+  
+    <h3>Bitwise Operations</h3>
+    <button (click)="bitwise('and')">AND (&)</button>
+    <button (click)="bitwise('or')">OR (|)</button>
+    <button (click)="bitwise('xor')">XOR (^)</button>
+    <button (click)="bitwise('not')">NOT (~)</button>
+    <button (click)="bitwise('leftShift')">Left Shift (<<)</button>
+    <button (click)="bitwise('rightShift')">Right Shift (>>)</button>
+  
+    <h3>Ternary Operation</h3>
+    <button (click)="ternary()">Ternary</button>
+  
+    <div *ngIf="result !== undefined">
+      <h3>Result:</h3>
+      <p>{{ result }}</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,16 @@
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  div {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin-right: 5px;
+  }
+  

@@ -1,0 +1,15 @@
+
+
+<h1 *ngIf=" !data; then load; else sample" > </h1>
+
+<!-- //condition 1 -->
+<ng-template #sample>    
+   {{data}}
+</ng-template>
+
+<!-- //condition 2 -->
+<ng-template #load>
+    Loading.....!!!!!
+</ng-template>
+
+

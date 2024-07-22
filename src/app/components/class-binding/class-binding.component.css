@@ -1,0 +1,13 @@
+.active{
+    background-color: blue;
+    color: white;
+}
+
+.inactive{
+    background-color: green;
+    color: white;
+}
+
+.c1{
+    border: solid grey; background-color: aqua;
+}

@@ -1,0 +1,10 @@
+
+<input type="text" [(ngModel)]="op">
+
+<div [ngSwitch]="op"> 
+         <div *ngSwitchCase="'+'">{{num1}}+{{num2}} = {{num1+num2}}</div>
+         <div *ngSwitchCase="'-'">{{num1}}-{{num2}} = {{num1-num2}}</div>
+         <div *ngSwitchCase="'*'">{{num1}}*{{num2}} = {{num1*num2}}</div>
+         <div *ngSwitchCase="'/'">{{num1}}/{{num2}} = {{num1/num2}}</div>
+         <div *ngSwitchDefault="'+'">Invalid Match</div>
+</div>

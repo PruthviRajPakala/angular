@@ -1,0 +1,66 @@
+
+<!-- <p *ngFor="let n of nums ">ng-for works! {{n}}</p> -->
+
+
+
+<!-- <p *ngFor="let a of apla;index as i"> Letters {{a}} {{i}}</p> -->
+
+
+
+
+<!-- <table border="2" >
+       <tr *ngFor="let a of apla; index as i; ">   
+              <td >
+                data {{a}}  {{i+1}}
+               </td>
+       </tr>
+</table> -->
+
+
+
+
+<!-- 
+<table border="3">
+
+    <tr >
+        <td>content</td>
+        <td>index</td>
+        <td>even</td>
+        <td>odd</td>
+        <td>first</td>
+        <td>last</td>
+    </tr>
+
+<tr *ngFor="let m of mobiles; index as i; even as e; odd as o; first as f; last as l;">
+
+    <td>{{m}}</td>
+    <td>{{i}}</td>
+    <td>{{e}}</td>
+    <td>{{o}}</td>
+    <td>{{f}}</td>
+    <td>{{l}}</td>
+
+</tr>
+</table> -->
+
+
+
+
+
+<table border="2">
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Price</td>
+      <td>Ram</td>
+      <td>Storage</td>
+    </tr>
+    <tr *ngFor="let d of mDetails">
+      <td>{{d.id}}</td>
+      <td>{{d.name}}</td>
+      <td>{{d.price}}</td>
+      <td>{{d.ram}}</td>
+      <td>{{d.storage}}</td>
+    </tr>
+  </table>
+   
