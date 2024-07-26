@@ -24,6 +24,7 @@ import { UserFormComponent } from './components/user-form/user-form.component';
 
 
 
+
 export const routes: Routes = [
      { path: '',component:AppComponent }, 
     { path: 'string', component: StringInterpolationComponent },
@@ -52,5 +53,7 @@ export const routes: Routes = [
     {path:'operators', component:OperatorsComponent},
     {path:'userForm',component: UserFormComponent},
 
+    
+    
   ];
   

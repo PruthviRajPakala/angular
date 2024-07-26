@@ -8,6 +8,7 @@ import {  BrowserModule } from '@angular/platform-browser';
 
 import { routes } from './app.routes';
 import { CommonModule } from '@angular/common';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,7 +18,7 @@ export const appConfig: ApplicationConfig = {
      NgModel,
      FormsModule,
      BrowserModule,
-     CommonModule,
+     CommonModule, provideAnimationsAsync(),
      
      
     ]
