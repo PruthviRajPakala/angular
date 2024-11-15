@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 export class AttributeComponent {
 
 
-  isdisabled: boolean = false;
+  isdisabled: boolean =false;
   ishidden: boolean = false;
 
   // path : string ='src/app/assets/krishna.png';
