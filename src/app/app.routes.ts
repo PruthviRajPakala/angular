@@ -21,6 +21,7 @@ import { Parent3Component } from './components/parent3/parent3.component';
 import { Child3Component } from './components/child3/child3.component';
 import { OperatorsComponent } from './components/operators/operators.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
+import { VariablesComponent } from './components/TypeScript Basics/variables/variables.component';
 
 
 
@@ -53,6 +54,10 @@ export const routes: Routes = [
     {path:'operators', component:OperatorsComponent},
     {path:'userForm',component: UserFormComponent},
 
+    //b. TypeScript Basics
+    //•	Variables, data types, and operators
+    {path:'variables', component: VariablesComponent},
+    
     
     
   ];
